@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile Page</title>
+    <style>
+      body {
+            background-image: url("static/images/background2.png");
+			background-size: cover;
+			background-repeat: no-repeat
+        }
+      .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #54520d;
+            color: #fff;
+            padding: 10px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .profile-card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 36px;
+      }
+      h2 {
+        margin-top: 20;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+      p {
+        margin-bottom: 0px;
+        font-size: 18px;
+      }
+      .button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 22px;
+      }
+      .textbox {
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				margin-bottom: 10px;
+				padding: 10px;
+				/* width: 100%; */
+			}
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/home">Home</a>
+      <a href="/login">Logout</a>
+  </div>
+    <div class="container">
+      <div class="profile-card">
+        <img class="profile-picture" src="https://via.placeholder.com/200">
+        <h1>{{username}}</h1>
+        <h2>Manufacturer Kerala Region</h2>
+        <!-- <h2>About Me</h2> -->
+        <p>A manufacturer can add new product to list.</p>
+        <p>These products are only available to distributer for further updating the product location.</p>
+        <!-- <h2>Add New Product</h2> -->
+        <form method="post">
+        <input type="submit" name="submit_button" class="button" value="Add Product"></br></br>
+        <!-- <button type="submit" name="submit_button" value="Add Product" >Verify</button> -->
+        <!-- <input type="submit" value="Log In"> -->
+      </form>
+      </div>
+    </div>
+  </body>
+</html>

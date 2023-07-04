@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+		<style>
+			body {
+            background-image: url("static/images/background2.png");
+			background-size: cover;
+			background-repeat: no-repeat
+        }
+		.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #54520d;
+            color: #fff;
+            padding: 10px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+			.container {
+				
+                /* background-color: #d177ec;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+                max-width: 500px;
+                margin: auto;
+                padding: 20px; */
+                background-color: #d177ec;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                max-width: 500px;
+                margin: auto;
+                padding: 20px;
+                
+			}
+			.border {
+				/* margin-top: 100px; */
+				background-color: #f5f5f5;
+				border-radius: 20px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+				padding: 20px;
+                margin: auto;
+				width: 400px;
+				/* margin-bottom: 200px; */
+				align-items: center;
+			}
+			.header {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 30px;
+			}
+			.word {
+				color: #413c58;
+				font-size: 30px;
+				font-weight: bold;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+			.textbox {
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				margin-bottom: 10px;
+				padding: 10px;
+				width: 100%;
+			}
+            .level_select {
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				margin-bottom: 10px;
+				padding: 10px;
+				/* width: 100%; */
+			}
+            .role_select {
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				margin-bottom: 10px;
+				padding: 10px;
+				/* width: 100%; */
+			}
+			.btn {
+				background-color: #413c58;
+				border: none;
+				border-radius: 10px;
+				color: #fff;
+				cursor: pointer;
+				font-size: 16px;
+				margin-top: 20px;
+				padding: 10px;
+				width: 100%;
+			}
+			.bottom {
+				color: #1d1a2c;
+				font-size: 16px;
+				margin-top: 20px;
+				text-align: center;
+			}
+			.bottom a {
+				color: #413c58;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.bottom a:hover {
+				text-decoration: underline;
+			}
+			.msg {
+				color: #FF0000;
+				font-size: 16px;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="/home">Home</a>
+			<a href="/login">Logout</a>
+		</div>
+			<div class="border">
+				<div class="header">
+					<h1 class="word">Register</h1>
+				</div>
+				<h2 class="word">
+					<form action="{{ url_for('register') }}" method="post">
+						<div class="msg">{{ msg }}</div>
+                        <label class="textbox"for="role">Role:</label>
+                            <select name="role" id="role" class="form-control" required="True" class="role_select">
+                                <option class=label value="seller">Seller</option>
+								<option class=label value="manufacturer">Manufacturer</option>
+                            </select>
+                        <label class="textbox" for="level">Level:</label>
+                            <select name="level" id="level"  required="True" class="level_select">
+                                <option class="region_label"value="Level0">0</option>
+                                <option class="region_label"value="Level1">1</option>
+                                <option class="region_label" value="Level2">2</option>
+                            </select>
+						<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
+						<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/>
+						<input id="confirm_password" name="confirm_password" type="password" placeholder="Re-enter Your Password" class="textbox"/>
+						<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/>
+						<input id="loc" name="loc" type="text" placeholder="Enter your location" class="textbox"/>
+						<input type="submit" class="btn" value="Sign Up">
+					</form>
+				</h2>
+				<p class="bottom">Already have an account? <a href="{{url_for('login')}}">Sign In here</a></p>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Details</title>
+    <style>
+      body {
+          background-image: url("static/images/background2.png");
+			    background-size: cover;
+			  background-repeat: no-repeat
+        }
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #54520d;
+            color: #fff;
+            padding: 10px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 0;
+      }
+      h2 {
+        font-weight: normal;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th {
+        text-align: right;
+        background-color: #ddd;
+        padding: 10px;
+        width: 30%;
+      }
+      td {
+        padding: 10px;
+      }
+
+      .value {
+        font-weight: normal;
+      }
+      .text-center {
+        text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+    <a href="/home">Home</a>
+    <a href="/login">Login</a>
+    </div>
+    <div class="container">
+      <h1>Product Details</h1>
+      <h2>Product is genuine and was manufactured by kerala section of our brand</h2>
+      <table>
+        <tr>
+          <th>Product ID</th>
+          <td><span class="value">{{p_id}}</span></td>
+        </tr>
+        <tr>
+          <th>Product Name</th>
+          <td><span class="value">{{p_name}}</span></td>
+        </tr>
+        <tr>
+          <th>Product Category</th>
+          <td><span class="value">{{p_cat}}</span></td>
+        </tr>
+        <tr>
+          <th>Manufacturing Date</th>
+          <td><span class="value">{{m_date}}</span></td>
+        </tr>
+        <!-- <tr>
+          <th>Expiry Date</th>
+          <td><span class="value">{{e_date}}</span></td>
+        </tr> -->
+        <tr>
+          <th>Maximum Retail Price</th>
+          <td><span class="value">{{mrp}}</span></td>
+        </tr>
+        <tr>
+          <th>Location of sales</th>
+          <td><span class="value">{{loc}}</span></td>
+        </tr>
+        <tr>
+          <th>Hash Value</th>
+          <td><span class="value">{{hash_value}}</span></td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td><span class="value">{{des}}</span></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <style>
+        body {
+            /* background-color: #614061; */
+            background-image: url("static/images/background2.png");
+			background-size: cover;
+			background-repeat: no-repeat
+        }
+        .parent {
+			display: flex;
+			align-items: center;
+			height: 20vh;
+		}
+        .container {
+            background-color: #f2ef9d;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            align-items: center;
+        }
+        h1 {
+            color: #050413;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            color: #050413;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            border: none;
+            border-radius: 5px;
+            color: #0f0f0f;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 15px;
+            text-transform: uppercase;
+            width: 50%;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        button[type="submit"] {
+            background-color: #54520d;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            /* text-transform: uppercase; */
+            width: 50%;
+            margin-bottom: 20px;
+            text-align: center;
+             padding-right: 40px;
+            /* align-items: center; */
+        }
+        .text-center {
+        text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent"></div>
+    <div class="container">
+        <h1>Check Product Genuinity</h1>
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="username">Product ID : <input type="text" id="pid" name="pid" placeholder="Enter your product ID" required></label>
+            <div class="text-center">
+            <!-- <input type="submit" value="Check"> -->
+            <button type="submit" value="Check" >Verify</button>
+        </div>
+        </form>
+        <!-- <a href="{{url_for('login')}}" class="signup-link">login</a> -->
+    </div>
+</div>
+</body>
+</html>

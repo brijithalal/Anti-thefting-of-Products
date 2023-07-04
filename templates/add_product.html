@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Product Details</title>
+		<style>
+		body {
+            background-image: url("static/images/background2.png");
+			background-size: cover;
+			background-repeat: no-repeat
+        }
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			.border {
+				background-color: #fff;
+				border-radius: 20px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+				padding: 40px;
+				width: 600px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			h1 {
+				color: #413c58;
+				font-size: 32px;
+				font-weight: bold;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+			label {
+				color: #413c58;
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 10px;
+				display: block;
+			}
+			input[type="text"], input[type="date"], input[type="number"], textarea {
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				margin-bottom: 20px;
+				padding: 10px;
+				width: 100%;
+				background-color: #f5f5f5;
+				color: #413c58;
+				font-family: Arial, sans-serif;
+				resize: none;
+			}
+			select {
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				margin-bottom: 20px;
+				padding: 10px;
+				width: 100%;
+				background-color: #f5f5f5;
+				color: #413c58;
+				font-family: Arial, sans-serif;
+			}
+			.btn {
+				background-color: #413c58;
+				border: none;
+				border-radius: 10px;
+				color: #fff;
+				cursor: pointer;
+				font-size: 18px;
+				margin-top: 20px;
+				padding: 10px 30px;
+				transition: all 0.3s ease;
+			}
+			.btn:hover {
+				background-color: #1d1a2c;
+			}
+			.bottom {
+				color: #1d1a2c;
+				font-size: 16px;
+				margin-top: 20px;
+				text-align: center;
+			}
+			.bottom a {
+				color: #413c58;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.bottom a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="border">
+				<h1>Enter Product Details</h1>
+				<form action="" method="POST">
+                    <label for="product-id">Product ID:</label>
+                    <input type="text" id="product-id" name="product-id"><br>
+                  
+                    <label for="manufacturing-date">Manufacturing Date:</label>
+                    <input type="date" id="manufacturing-date" name="manufacturing-date"><br>
+                  
+                   
+                  
+                    <label for="mrp">MRP:</label>
+                    <input type="text" id="mrp" name="mrp"><br>
+                  
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description"></textarea><br>
+                  
+                    <label for="product-category">Product Category:</label>
+                    <select id="product-category" name="product-category">
+                      <option value="electronics">Electronics</option>
+                      <option value="clothing">Clothing</option>
+                      <option value="books">Books</option>
+                      <option value="beauty">Beauty</option>
+                    </select><br>
+                  
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" name="product-name"><br>
+                  
+                    <input type="submit" class="btn" value="Add Product and Generate QR code">
+                  </form>
+                  
